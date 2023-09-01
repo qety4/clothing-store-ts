@@ -1,0 +1,97 @@
+@import '../../assets/saas-variables/media.scss';
+
+.featured-product-container {
+    margin: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    position: relative;
+    background: linear-gradient(180deg, rgba(241, 241, 241, 0.079) 0%, rgba(232, 232, 232, 0) 100%);
+    border-radius: 3px;
+    padding: 0, 8rem;
+    font-size: 18px;
+    gap: 0.8rem;
+    height: 91%;
+    &:hover {
+        .add-to-cart-btn {
+            opacity: 0.9;
+        }
+    }
+
+    .add-to-cart-btn {
+        transition: .25s linear;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.667);
+        border-radius: 0.1rem;
+        border: black solid 1px;
+        color: white;
+        text-shadow: 0.03rem 0.03rem 0.1rem;
+        transform: translate(0, 10%);
+        position: absolute;
+        z-index: 10;
+        font-size: 120%;
+        padding: 4% 8%;
+        cursor: pointer;
+        margin-bottom: 8%;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.78);
+            color: black;
+        }
+    }
+
+    .product-text-desc {
+        width: 90%;
+
+        .title-price{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+        .product-title {
+            letter-spacing: 0.3rem;
+        }
+
+        .product-price {
+            font-size: 21px;
+        }
+    }
+
+
+.product-image {
+    height: 73%;
+    width: 80%;
+    padding: 1rem 0.9rem 1rem 0.9rem;
+    z-index: 1;
+    transition: .2s ease-out;
+    &:hover{
+        border-radius: 0.3rem;
+        box-shadow: -0.03rem 0.1rem 0.3rem rgba(0, 0, 0, 0.221);
+    }
+    
+}
+
+@media(max-width:$resp-product) {
+    .add-to-cart-btn {
+        font-size: 90%;
+        padding: 5% 5%;
+        margin-bottom: 23%;
+    }
+
+    .product-text-desc {
+        font-size: 0.9rem;
+        height: 40%;
+
+        .product-title {
+            letter-spacing: 0.03rem;
+            font-size: 1rem;
+        }
+
+        .product-price {
+            font-size: 1rem;
+        }
+    }
+}
+}

@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import Nav from './Routes/Nav/Nav.component'
+import Home from './Routes/Home/Home.component'
+import ShopRoute from './Routes/ShopRoute/ShopRoute'
+import Checkout from './Routes/Checkout/Checkout'
+import PaymentPage from './Routes/PaymentPage/PaymentPage'
+import Profile from './Routes/Profile/Profile'
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route path='/' element={<Nav />}>
+        {/* <Route path='/' element={<h1>Yoo</h1>}/> */}
+        <Route index element={<Home />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/shop/*' element={<ShopRoute />} />
+        <Route path='/checkout' element={<Checkout />} />
+        <Route path='/pay' element={<PaymentPage />} /> 
+       </Route>
+    </Routes>
+  )
 }
 
-export default App;
+export default App

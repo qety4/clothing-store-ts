@@ -1,0 +1,31 @@
+
+.products-scroll {
+    &*{
+        margin: 0;
+        padding: 0;
+    }
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 25%;
+    gap: 2.1%;
+    padding-left: 1.9%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    .featured-product-container{
+        width: 90%;
+        height: 91%;
+        .product-image{
+            height: 72%;
+            width: 78%;
+        }
+
+    }
+}
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline:1.9%;
+    *{
+        scroll-snap-align: start ;
+
+    }
+}

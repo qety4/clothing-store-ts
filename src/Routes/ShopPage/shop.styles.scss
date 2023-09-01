@@ -1,0 +1,44 @@
+@import '../../assets/saas-variables/media.scss';
+.shop{
+    .shop-title{
+        padding: 0rem 0 2.2rem 0 ;
+        text-align: center;
+        font-size: 3rem;
+        text-shadow: 0.1rem 0.2rem 0.2rem rgb(223, 223, 223);
+        letter-spacing: 0.8rem;
+        border-bottom: solid 1px #d6dce6;
+    }
+
+    .shop-filter{
+        padding: 0% 0 0 1% ;
+        .shop-filter-select{
+            // text-align: center;
+            // padding: 1.5rem 2.5rem;
+            font-size: 130%;
+            // border-radius: 3px;
+            // border: 1.5px solid black;
+        }
+    }
+    .shop-products-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin: 0.9rem 0.8rem;
+        @media(max-width: $resp-layout){
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .search-title{
+        text-align: center;
+        font-size: 1rem;
+        text-shadow: 0.1rem 0.2rem 0.2rem rgb(223, 223, 223);
+        letter-spacing: 0.3rem;
+        padding: 0rem 0 2.1rem 0 ;
+    }
+    .searched-items{
+        border-bottom: solid 1px #d6dce6;
+    }
+    .no-results{
+        font-size: 2rem;
+        text-align: center;
+    }
+}
