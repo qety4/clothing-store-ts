@@ -1,14 +1,11 @@
-import React from 'react'
+import styled from 'styled-components'
 
-const Button = (
-  // {properties}
-  )=> {
+// type PropertiesProps = {
+//   type: 'rounded' | 'squared' | 'addToCart',
+//   size: 's' | 'm' | 'l'
+// }
 
-  return (
-    <>
-        
-    </>
-  )
-}
+export const roundedButtonM = styled.button`
 
-export default Button
+
+`

@@ -6,7 +6,7 @@ import { createContext, useState } from "react";
 export const SearchContext = createContext({
     searchValue:'',
     updateSearch: (e:React.FormEvent<HTMLFormElement>) => { },
-    handleChange:(e:React.ChangeEvent<HTMLSelectElement>)=>{ },
+    handleChange:(a: string)=>{ },
     searchReset:()=>{}
 })
 
@@ -25,8 +25,8 @@ export const SearchProvider = ({ children }:ChildrenType) => {
         form.search.value = ''
     }
 
-    const handleChange = (e:React.ChangeEvent<HTMLSelectElement>)=>{
-        const newValue=e.target.value
+    const handleChange = (a:string)=>{
+        const newValue= a
         setSearch(newValue)
     }
 

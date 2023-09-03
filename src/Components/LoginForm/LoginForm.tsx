@@ -98,7 +98,6 @@ const LogInForm = () => {
                     <button type="submit" className="form-btn">LOG IN</button>
                     <p className='sign-in-demo' onClick={signInDemo} >sign in demo</p>
                 </form>
-                <a href='/'>Forgot password?</a>
                 <p>{errors.email?.message}</p>
             </div>
         </div>

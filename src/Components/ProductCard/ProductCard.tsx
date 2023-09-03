@@ -3,7 +3,7 @@ import { CartContext } from '../../Contexts/Cart.context'
 import './productCard.styles.scss'
 import { useNavigate } from 'react-router-dom'
 
-const ProductCard = ({ item }:{item:CartItem}) => {
+const ProductCard = ({ item }: { item: CartItem }) => {
     const { addToCart, cartItems } = useContext(CartContext)
     const navigate = useNavigate()
     const { url, title, about, price } = item
@@ -13,13 +13,13 @@ const ProductCard = ({ item }:{item:CartItem}) => {
         console.log(item)
         console.log(cartItems)
     }
-    const itemPage = ()=>{
+    const itemPage = () => {
         navigate(`/shop/${item.id}`)
     }
-    
+
     return (
         <div className='featured-product-container' >
-        <img className='product-image' src={url} onClick={itemPage} alt="" />
+            <img className='product-image' src={url} onClick={itemPage} alt="" />
             <div className='product-text-desc'>
                 <div className='title-price'>
                     <p className="product-title">

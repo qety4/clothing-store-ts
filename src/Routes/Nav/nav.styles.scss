@@ -20,7 +20,7 @@ a {
 }
 
 .nav {
-  padding: 0.8rem 3% 1.3rem 3%;
+  padding: 0.8rem 3% 0.8rem 3%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   z-index: 101;
@@ -37,7 +37,7 @@ a {
   }
 
   .nav__left {
-
+    // position: relative;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

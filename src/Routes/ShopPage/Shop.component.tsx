@@ -4,9 +4,10 @@ import { SearchContext } from '../../Contexts/Search.context'
 import { useContext } from 'react'
 import ProductCard from '../../Components/ProductCard/ProductCard'
 import { products } from '../../assets/all-products/allProducts'
+import ShopSelect from '../../Components/ShopSelect/ShopSelect'
 
 const Shop = () => {
-    const { searchValue, handleChange } = useContext(SearchContext)
+    const { searchValue } = useContext(SearchContext)
     
     const searchedProducts = searchValue.replace(/\s+/g, "") === '' ?
         undefined
@@ -26,34 +27,10 @@ const Shop = () => {
     
     return (
         <div className="shop">
-            <div className='shop-filter'>
-                <select onChange={handleChange} className='shop-filter-select'>
-                    <option value="" disabled >
-                        FILTER
-                    </option>
-                    <option value="t-shirt">
-                        t-shirts
-                    </option>
-                    <option value="jacket">
-                        jackets
-                    </option>
-                    <option value="pants">
-                        pants
-                    </option>
-                    <option value="sneakers">
-                        sneakers
-                    </option>
-                    <option value="hats">
-                        hats
-                    </option>
-                    <option value="">
-                        SHOP ALL
-                    </option>
-                </select>
-            </div>
 
+            <ShopSelect/>
             {
-                searchedProducts != undefined ? 
+                searchedProducts !== undefined && searchedProducts.at(0) ? 
                     <div className='searched-items'>
                         <p className='search-title'>search results for {searchValue}</p>
 

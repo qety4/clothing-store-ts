@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 const Checkout = () => {
     const { cartItems, cartTotal } = useContext(CartContext)
     const navigate = useNavigate()
-    const goToPay = ()=>{
+    const goToPay = () => {
         navigate('/pay')
     }
     return (
@@ -42,8 +42,12 @@ const Checkout = () => {
                     }
                 </div>
             </div>
-            <p className='checkout-total'>{cartTotal}€ Total</p>
-            <button onClick={goToPay} className='pay-page-button'>PAY</button>
+            {cartItems.at(0) &&
+                <>
+                    <p className='checkout-total'>{cartTotal}€ Total</p>
+                    <button onClick={goToPay} className='pay-page-button'>PAY</button>
+                </>
+            }
         </div>
     )
 }

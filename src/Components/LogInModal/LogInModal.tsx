@@ -62,7 +62,7 @@ const LogIn = () => {
 
                             <div className='login-modal-content'>
 
-                                <h3>Welcome</h3>
+                                <p className='modal-title'>welcome</p>
                                 <div className='login-register'>
                                     <p
                                         className={log === 0 ? 'login' : ''}

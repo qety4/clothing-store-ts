@@ -1,31 +1,106 @@
+.scroll-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-width: 2.1rem;
+    max-width: auto;
+    opacity: 0;
+    min-height: 2.8rem;
+    z-index: 100;
+    margin: 0 0.3rem;
+    transform: translate(0, -8%);
+    // background-color: rgba(255, 255, 255, 0.845);
+    border-radius: 48%;
+    // border: solid .3px rgba(0, 0, 0, 0.188);
+    transition: .8s linear;
+    
+    .chevron-scroll {
+        color: rgba(13, 13, 13, 0.88);
+        width: 1.9rem;
+        height: auto;
+    }
+    &:hover {
+        border: none;
+        // box-shadow: 0 0.3px 1.8px rgba(0, 0, 0, 0.188);
+        // background-color: rgba(0, 0, 0, 0.148);
+
+        .chevron-scroll {
+            
+            color: rgba(94, 94, 94, 0.587);
+        }
+    }
+
+}
+
+.left {
+    left: 0;
+    // padding: 0rem 0.1rem 0 0;
+
+}
+
+.right {
+    right: 0;
+    // padding: 0rem 0rem 0 0.1rem;
+
+}
+
 
 .products-scroll {
-    &*{
+    &* {
         margin: 0;
         padding: 0;
     }
+
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 25%;
-    gap: 2.1%;
-    padding-left: 1.9%;
-    overflow-x: auto;
+    padding-left: 4.8%;
+    // padding-right: 1.9%;
+    overflow-x: scroll;
     overscroll-behavior-inline: contain;
-    .featured-product-container{
-        width: 90%;
-        height: 91%;
-        .product-image{
-            height: 72%;
-            width: 78%;
+    width: 100%;
+
+
+    .featured-product-container {
+        // border: solid 1px black;
+        width: 80%;
+        height: 90%;
+        // box-shadow: 0 0px 2.8px rgba(0, 0, 0, 0.33);
+        padding: 0.3rem 0.3rem 0.8rem 0.3rem;
+
+        .product-about {
+            display: none;
+        }
+
+        .product-text-desc {
+
+            width: 80%;
+        }
+
+        .product-image {
+            padding: 1rem 1rem 0rem 1rem;
+            height: 85%;
+            width: 79%;
         }
 
     }
-}
-.snaps-inline{
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline:1.9%;
-    *{
-        scroll-snap-align: start ;
 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 4.8%;
+
+    * {
+        scroll-snap-align: start;
+
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
     }
 }

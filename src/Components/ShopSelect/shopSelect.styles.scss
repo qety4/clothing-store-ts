@@ -1,0 +1,39 @@
+.shop-filter {
+    position: absolute;
+    height: 20vh;
+    left: 2rem;
+    top: 13%;
+    z-index: 10;
+    .select-btn {
+        width: 7.5rem;
+        height: 1.8rem;
+        background: rgba(255, 255, 255, 0.508);
+        border: solid black 2px;
+        border-radius: 2.8px;
+        box-shadow: 0 0.3px 0.8px;
+        letter-spacing: 0.1rem
+    }
+
+    .shop-filter-select {
+        border-radius: 3px;
+        width: 6.5rem;
+        margin-top: 0.18rem;
+        z-index: 10;
+        padding: 0.7rem 0rem 0.7rem 1rem;
+        position: absolute;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        border: solid 1px black;
+        background: rgb(255, 255, 255);
+        .shop-filter-option {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            &:hover{
+                color: rgba(0, 0, 0, 0.696);
+            }
+        }
+    }
+}

@@ -3,18 +3,14 @@ import { createContext, useReducer,ReactNode } from "react";
 
 
 
-type CartOpenPayload ={
-    isCartOpen:boolean
-}
 type CartItemsPayload ={
     cartItems:CartItem[],
     cartCount:number,
     cartTotal:number
 }
-type CartState = CartOpenPayload & CartItemsPayload
+type CartState = CartItemsPayload
 
 let INITIAL_STATE:CartState = {
-    isCartOpen: false,
     cartItems: [],
     cartCount: 0,
     cartTotal: 0,
@@ -33,7 +29,6 @@ if (cartLocalStorage) {
 
 export const CartContext = createContext({
     ...INITIAL_STATE,
-    setIsCartOpen: (bool:boolean) => { },
     addToCart: (cartItem:CartItem) => { },
     deleteItem: (cartItem:CartItem) => { },
     reduceQt: (cartItem:CartItem) => { },
@@ -42,12 +37,11 @@ export const CartContext = createContext({
 
 export const enum CART_ACTION_TYPES{
     SET_CART_ITEMS,
-    SET_CART_OPEN
 }
 
 type CartAction = {
     type: CART_ACTION_TYPES,
-    payload: CartOpenPayload | CartItemsPayload
+    payload: CartItemsPayload
 }
 
 
@@ -57,11 +51,6 @@ export const cartReducer = (state:typeof INITIAL_STATE, action:CartAction): type
 
     switch (type) {
         case CART_ACTION_TYPES.SET_CART_ITEMS:
-            return {
-                ...state,
-                ...payload
-            }
-        case CART_ACTION_TYPES.SET_CART_OPEN:
             return {
                 ...state,
                 ...payload
@@ -111,7 +100,7 @@ export const CartProvider = ({ children }:ChildrenType) => {
 
     const [state, dispatch] = useReducer(cartReducer, INITIAL_STATE)
 
-    const { cartItems, isCartOpen, cartCount, cartTotal } = state
+    const { cartItems, cartCount, cartTotal } = state
 
     const updateCartReducer = (newCartItems:CartItem[]) => {
         console.log(newCartItems)
@@ -133,14 +122,14 @@ export const CartProvider = ({ children }:ChildrenType) => {
         })
     }
 
-    const setIsCartOpen = (bool:boolean) => {
-        dispatch({
-            type: CART_ACTION_TYPES.SET_CART_OPEN,
-            payload: {
-               isCartOpen: bool
-            }
-        })
-    }
+    // const setIsCartOpen = (bool:boolean) => {
+    //     dispatch({
+    //         type: CART_ACTION_TYPES.SET_CART_OPEN,
+    //         payload: {
+    //            isCartOpen: bool
+    //         }
+    //     })
+    // }
 
     const addToCart = (cartItem:CartItem) => {
         const newCart = addCartItem(cartItems, cartItem)
@@ -161,11 +150,9 @@ export const CartProvider = ({ children }:ChildrenType) => {
 
 
     const value = {
-        setIsCartOpen,
         addToCart,
         reduceQt,
         deleteItem,
-        isCartOpen,
         cartItems,
         cartCount,
         cartTotal

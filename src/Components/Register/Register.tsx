@@ -42,7 +42,7 @@ const Register = () => {
         if (formData.password === formData.confirmPassword)
             submit(formData.email, formData.displayName, formData.password)
         else {
-            setError('displayName', { message: 'passwords do not match' })
+            setError('root', { message: 'passwords do not match' })
             return
         }
     }
@@ -55,15 +55,15 @@ const Register = () => {
             alert('user created !')
         } catch (error) {
             if (error instanceof FirebaseError) {
-                setError('displayName', { message: error.code })
+                setError('root', { message: error.code })
                 return
             }
             if (error instanceof z.ZodError) {
                 console.log(error)
-                setError('displayName', { message: error.message })
+                setError('root', { message: error.message })
                 return
             }
-            setError('displayName', { message: `${error}` })
+            setError('root', { message: `${error}` })
         }
         finally {
             reset()
@@ -79,7 +79,7 @@ const Register = () => {
                         <label htmlFor="reg-email">Email</label>
                         <input className='input-text'
 
-                            required
+                            // required
                             id='reg-email'
                             type="email"
                             {...register('email')}
@@ -91,7 +91,7 @@ const Register = () => {
 
                         <input className='input-text'
 
-                            required
+                            // required
                             id='reg-name'
                             type="text"
                             {...register('displayName')}
@@ -104,7 +104,7 @@ const Register = () => {
                         <input className='input-text'
 
                             type={visible ? "text" : "password"}
-                            required
+                            // required
                             id='password'
                             {...register('password')}
                         
@@ -118,7 +118,7 @@ const Register = () => {
                         <input className='input-text'
 
                             type={visible ? "text" : "password"}
-                            required
+                            // required
                             id='confirm-password'
                             {...register('confirmPassword')}
                         />
@@ -126,7 +126,7 @@ const Register = () => {
                     </div>
                     <button className='form-btn'>CREATE ACCOUNT</button>
                 </form>
-                <p>{errors.displayName?.message}</p>
+                <p>{errors.password?.message}</p>
             </div>
         </div>
     )
