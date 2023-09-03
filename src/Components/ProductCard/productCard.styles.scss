@@ -26,15 +26,14 @@
         background: rgba(0, 0, 0, 0.667);
         border-radius: 1.8px;
         border: none;
-        //  black solid 1px;
         box-shadow: 0 1.8px 3px rgba(0, 0, 0, 0.33);
         color: white;
         text-shadow: 0.3px 0.8px 3px black;
         transform: translate(0, 10%);
         position: absolute;
         z-index: 3;
-        font-size: 120%;
-        padding: 4% 8%;
+        font-size: 110%;
+        padding: 3.8% 7%;
         cursor: pointer;
         margin-bottom: 8%;
 
@@ -78,9 +77,9 @@
 
     @media(max-width:$resp-product) {
         .add-to-cart-btn {
+            bottom: 50%;
             font-size: 90%;
             padding: 5% 5%;
-            margin-bottom: 23%;
         }
 
         .product-text-desc {

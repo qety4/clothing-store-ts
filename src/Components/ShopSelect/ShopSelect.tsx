@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { SearchContext } from '../../Contexts/Search.context'
 import { Listbox } from '@headlessui/react'
 import './shopSelect.styles.scss'
+import { motion } from 'framer-motion'
 
 function ShopSelect() {
   const { handleChange } = useContext(SearchContext)
@@ -11,7 +12,15 @@ function ShopSelect() {
       <Listbox value={''} onChange={handleChange}>
         <Listbox.Button className='select-btn'>FILTER</Listbox.Button>
 
-        <Listbox.Options className='shop-filter-select'>
+        <Listbox.Options as={motion.div} className='shop-filter-select'
+          variants={{
+            hidden: { opacity: 0, y: -4 },
+            visible: { opacity: 1, y: 0 }
+          }}
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 0.38, delay: 0 }}
+        >
 
           <Listbox.Option className='shop-filter-option' value="t-shirts" >
             t-shirts

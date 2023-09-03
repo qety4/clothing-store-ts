@@ -11,7 +11,7 @@ const OtherLooks = () => {
           otr.map((item, index) => {
             if (index < 4) {
               return (
-                <ProductCard key={item.title} item={item} />
+                <ProductCard homePage={true} key={item.title} item={item} />
               )
             }
             return null

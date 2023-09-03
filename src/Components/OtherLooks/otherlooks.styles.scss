@@ -13,6 +13,13 @@
         grid-template-columns: 1fr 1fr;
         height: 50%;
         width: 85%;
+
+        @media (max-width:$resp-layout) {
+            .add-to-cart-btn{
+                bottom: 20%;
+            }
+            
+        }
     }
     .look-pic-container{
         padding: 0 0 3% 0;

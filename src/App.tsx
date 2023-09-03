@@ -5,7 +5,6 @@ import ShopRoute from './Routes/ShopRoute/ShopRoute'
 import Checkout from './Routes/Checkout/Checkout'
 import PaymentPage from './Routes/PaymentPage/PaymentPage'
 import Profile from './Routes/Profile/Profile'
-
 const App = () => {
 
   return (

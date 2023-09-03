@@ -6,6 +6,7 @@ import LogInForm from '../LoginForm/LoginForm'
 import Register from '../Register/Register'
 import { useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
+import { motion } from 'framer-motion'
 
 const body = document.body
 
@@ -21,12 +22,10 @@ const LogIn = () => {
         }
     }, [])
 
-    const toggle = () => {
-        setModal(!modal)
-    }
     const toggleLogin = (a: number) => {
         setLog(a)
     }
+
     if (modal) {
         body.classList.add('stop-scroll')
     } else {
@@ -43,59 +42,55 @@ const LogIn = () => {
         <>
             <button
                 className='login-btn'
-                onClick={toggle}
+                onClick={() => setModal(true)}
             >
                 LOGIN
             </button>
-            <Transition appear show={modal} as={Fragment}>
-                <Transition.Child
-                    as={Fragment}
-                    enter="ease-out duration-1000"
-                    enterFrom="opacity-0 scale-80"
-                    enterTo="opacity-100 scale-100"
-                    leave="ease-in duration-1000"
-                    leaveFrom="opacity-100 scale-100"
-                    leaveTo="opacity-0 scale-95"
-                >
-                    <div className='login-modal'>
-                        <Dialog onClose={toggle} >
 
-                            <div className='login-modal-content'>
+            <Dialog className='headless-modal' open={modal} onClose={() => setModal(false)}>
+                <div className='login-modal'>
+                    <Dialog.Panel className='login-modal-content' as={motion.div}
+                        variants={{
+                            hidden: { opacity: 0.8, y: 4.8 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        initial='hidden'
+                        animate='visible'
+                        transition={{ duration: 0.48, delay: 0 }}
+                    >
 
-                                <p className='modal-title'>welcome</p>
-                                <div className='login-register'>
-                                    <p
-                                        className={log === 0 ? 'login' : ''}
-                                        onClick={() => { toggleLogin(0) }}>LOGIN</p>
-                                    <p
-                                        className={log === 0 ? '' : 'login'}
-                                        onClick={() => toggleLogin(1)}>SIGN UP</p>
-                                </div>
-                                <div className='modal-form'>
-                                    {
-                                        log === 0 ?
-                                            <>
-                                                <LogInForm />
-                                                <p className='reg-link'>don't have an account? <b onClick={() => toggleLogin(1)}>register</b></p>
+                        <p className='modal-title'>welcome</p>
+                        <div className='login-register'>
+                            <p
+                                className={log === 0 ? 'login' : ''}
+                                onClick={() => { toggleLogin(0) }}>LOGIN</p>
+                            <p
+                                className={log === 0 ? '' : 'login'}
+                                onClick={() => toggleLogin(1)}>SIGN UP</p>
+                        </div>
+                        <div className='modal-form'>
+                            {
+                                log === 0 ?
+                                    <>
+                                        <LogInForm />
+                                        <p className='reg-link'>don't have an account? <b onClick={() => toggleLogin(1)}>register</b></p>
 
-                                            </>
-                                            :
-                                            <>
-                                                <Register />
+                                    </>
+                                    :
+                                    <>
+                                        <Register />
 
-                                            </>
-                                    }
-                                </div>
-                                <p className='modal-or'>OR</p>
-                                <button className='mail-signin' onClick={signInWithGoogle} ><GoogleSvg />  sign in with google</button>
+                                    </>
+                            }
+                        </div>
+                        <p className='modal-or'>OR</p>
+                        <button className='mail-signin' onClick={signInWithGoogle} ><GoogleSvg />  sign in with google</button>
 
-                                {/* <button className='close-modal-btn' onClick={toggle}>&#10005;</button> */}
-                            </div>
-                        </Dialog>
-                    </div>
-                </Transition.Child>
-            </Transition >
+                        {/* <button className='close-modal-btn' onClick={toggle}>&#10005;</button> */}
 
+                    </Dialog.Panel>
+                </div>
+            </Dialog >
         </>
     )
 }

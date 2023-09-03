@@ -1,18 +1,18 @@
+@import '../../assets/saas-variables/media.scss';
+
+
 .scroll-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    min-width: 2.1rem;
-    max-width: auto;
+    min-width: 1.9rem;
     opacity: 0;
-    min-height: 2.8rem;
+    min-height: 1.9rem;
     z-index: 100;
     margin: 0 0.3rem;
     transform: translate(0, -8%);
-    // background-color: rgba(255, 255, 255, 0.845);
     border-radius: 48%;
-    // border: solid .3px rgba(0, 0, 0, 0.188);
     transition: .8s linear;
     
     .chevron-scroll {
@@ -22,12 +22,11 @@
     }
     &:hover {
         border: none;
-        // box-shadow: 0 0.3px 1.8px rgba(0, 0, 0, 0.188);
-        // background-color: rgba(0, 0, 0, 0.148);
+        background-color: rgba(0, 0, 0, 0.022);
 
         .chevron-scroll {
             
-            color: rgba(94, 94, 94, 0.587);
+            color: rgba(66, 66, 66, 0.643);
         }
     }
 
@@ -35,13 +34,11 @@
 
 .left {
     left: 0;
-    // padding: 0rem 0.1rem 0 0;
 
 }
 
 .right {
     right: 0;
-    // padding: 0rem 0rem 0 0.1rem;
 
 }
 
@@ -56,17 +53,17 @@
     grid-auto-flow: column;
     grid-auto-columns: 25%;
     padding-left: 4.8%;
-    // padding-right: 1.9%;
+
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
     width: 100%;
 
 
     .featured-product-container {
-        // border: solid 1px black;
+
         width: 80%;
         height: 90%;
-        // box-shadow: 0 0px 2.8px rgba(0, 0, 0, 0.33);
+
         padding: 0.3rem 0.3rem 0.8rem 0.3rem;
 
         .product-about {
@@ -83,7 +80,12 @@
             height: 85%;
             width: 79%;
         }
-
+        @media (max-width:$resp-layout) {
+            .add-to-cart-btn{
+                bottom: 0;
+            }
+            
+        }
     }
 
     &::-webkit-scrollbar {

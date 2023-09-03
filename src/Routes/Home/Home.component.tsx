@@ -6,6 +6,7 @@ import OtherLooks from '../../Components/OtherLooks/OtherLooks'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { SearchContext } from '../../Contexts/Search.context'
+import ComponentReveal from '../../Components/Reveal/ComponentReveal'
 
 const Home = () => {
     const navigate = useNavigate()
@@ -18,33 +19,37 @@ const Home = () => {
     return (
 
         <div className='home'>
-
-            <div className='slider-home'>
-                <p className='variety-title'>
-                    VARIETY
-                </p>
-                <Slider />
-            </div>
-
-            <div className='featured-products-home-container'>
-                <p className='featured-products-title'>
-                    FEATURED PRODUCTS
-                </p>
-                <FeaturedProducts />
-            </div>
-
-            <div className='other-looks-container'>
-                <div className='other-looks-title'>
-                    OTHER LOOKS
+            <ComponentReveal>
+                <div className='slider-home'>
+                    <p className='variety-title'>
+                        VARIETY
+                    </p>
+                    <Slider />
                 </div>
-                <OtherLooks />
-            </div>
-
-            <div className='shop-all-btn-container'>
-                <button onClick={shopAll} className='shop-all-btn'>
-                    SHOP ALL
-                </button>
-            </div>
+            </ComponentReveal>
+            <ComponentReveal>
+                <div className='featured-products-home-container'>
+                    <p className='featured-products-title'>
+                        FEATURED PRODUCTS
+                    </p>
+                    <FeaturedProducts />
+                </div>
+            </ComponentReveal>
+            <ComponentReveal>
+                <div className='other-looks-container'>
+                    <div className='other-looks-title'>
+                        OTHER LOOKS
+                    </div>
+                    <OtherLooks />
+                </div>
+            </ComponentReveal>
+            <ComponentReveal>
+                <div className='shop-all-btn-container'>
+                    <button onClick={shopAll} className='shop-all-btn'>
+                        SHOP ALL
+                    </button>
+                </div>
+            </ComponentReveal>
 
             <AboutFooter />
         </div>

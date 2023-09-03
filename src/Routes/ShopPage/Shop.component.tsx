@@ -38,7 +38,7 @@ const Shop = () => {
                             {
                                 searchedProducts?.map((item,index) => {
 
-                                    return <ProductCard key={`${item.id}-${index}`} item={item} />
+                                    return <ProductCard homePage={false} key={`${item.id}-${index}`} item={item} />
 
                                 })
                             }
@@ -56,7 +56,7 @@ const Shop = () => {
                 <div className='shop-products-container'>
                     {
                         products.map((item,index) => {
-                            return <ProductCard item={item} key={`${item.id}-${index}`} />
+                            return <ProductCard homePage={false} item={item} key={`${item.id}-${index}`} />
                         })
                     }
                 </div>
