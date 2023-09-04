@@ -87,7 +87,7 @@ const LogIn = () => {
                         <p className='modal-or'>OR</p>
                         <Button onClick={signInWithGoogle} type={ButtonTypes.RoundedBtnM}><GoogleSvg />  sign in with google</Button>
 
-                        {/* <button className='close-modal-btn' onClick={toggle}>&#10005;</button> */}
+                        <button className='close-modal-btn' onClick={()=>setModal(false)}>&#10005;</button>
 
                     </Dialog.Panel>
                 </div>

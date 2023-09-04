@@ -11,7 +11,6 @@ import {
     onAuthStateChanged,
     setPersistence,
     browserSessionPersistence,
-    inMemoryPersistence,
     browserLocalPersistence,
     User,
     NextOrObserver

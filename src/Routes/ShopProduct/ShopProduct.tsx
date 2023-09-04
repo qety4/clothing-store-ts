@@ -3,7 +3,6 @@ import { products } from '../../assets/all-products/allProducts'
 import { useParams } from 'react-router-dom'
 import './shopProduct.styles.scss'
 import { CartContext } from '../../Contexts/Cart.context'
-import Button, { ButtonTypes } from '../../Components/Button/Button'
 
 
 function ShopProduct() {

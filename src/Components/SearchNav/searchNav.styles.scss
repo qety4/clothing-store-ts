@@ -27,7 +27,6 @@
     padding: 2.3% 0 0 0;
     z-index: 10;
     display: flex;
-    // align-items: flex-start;
     justify-content: center;
     width: 80%;
 
@@ -43,7 +42,6 @@
       border: none;
       padding: 1px 1px 1px 8px;
       font-size: 1.1rem;
-      // padding: 1px;
       &:focus {
         outline: none;
       }
@@ -55,7 +53,6 @@
       box-sizing: border-box;
       height: 100%;
       background-color: white;
-      // border: solid black 0.2px;
       border-radius: 0px 3px 3px 0px;
     }
   }
