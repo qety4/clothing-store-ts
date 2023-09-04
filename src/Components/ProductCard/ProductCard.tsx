@@ -4,6 +4,7 @@ import './productCard.styles.scss'
 import { useNavigate } from 'react-router-dom'
 import ProductReveal from '../Reveal/ProductReveal'
 
+
 const ProductCard = ({ item,
     homePage
 }: {

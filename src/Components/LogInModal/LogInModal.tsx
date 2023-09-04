@@ -1,12 +1,13 @@
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import './loginModal.styles.scss'
 import { ReactComponent as GoogleSvg } from './../../assets/svgs/google.svg'
 import { signInWithGooglePopup } from '../../libs/firebase/firebase'
 import LogInForm from '../LoginForm/LoginForm'
 import Register from '../Register/Register'
 import { useEffect } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import { Dialog, } from '@headlessui/react'
 import { motion } from 'framer-motion'
+import Button, { ButtonTypes } from '../Button/Button'
 
 const body = document.body
 
@@ -84,7 +85,7 @@ const LogIn = () => {
                             }
                         </div>
                         <p className='modal-or'>OR</p>
-                        <button className='mail-signin' onClick={signInWithGoogle} ><GoogleSvg />  sign in with google</button>
+                        <Button onClick={signInWithGoogle} type={ButtonTypes.RoundedBtnM}><GoogleSvg />  sign in with google</Button>
 
                         {/* <button className='close-modal-btn' onClick={toggle}>&#10005;</button> */}
 

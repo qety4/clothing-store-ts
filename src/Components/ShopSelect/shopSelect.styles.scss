@@ -1,3 +1,6 @@
+@import '../../assets/saas-variables/media.scss';
+
+
 .shop-filter {
     position: absolute;
     height: 20vh;
@@ -34,6 +37,12 @@
             &:hover{
                 color: rgba(0, 0, 0, 0.696);
             }
+        }
+    }
+    @media (max-width:$resp-layout) {
+        .select-btn{
+            width: 5.3rem;
+            font-size: 0.78rem;
         }
     }
 }

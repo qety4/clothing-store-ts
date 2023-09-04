@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import {  useState } from 'react'
 import { ReactComponent as Show } from './../../assets/svgs/show.svg'
 import { ReactComponent as Hide } from './../../assets/svgs/hide.svg'
 import { signIn } from '../../libs/firebase/firebase'
@@ -8,6 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { loginValidator } from '../../libs/validators/loginValidator'
 import { z } from 'zod'
 import { FirebaseError } from 'firebase/app'
+import Button, { ButtonTypes } from '../Button/Button'
 
 type FormData = z.infer<typeof loginValidator>
 
@@ -95,7 +96,7 @@ const LogInForm = () => {
                     </div>
 
                     <label htmlFor="log-rem" className='log-remember'>Remember me <input onChange={() => setRemember((prev) => !prev)} name='remember' type="checkbox" id='log-rem' /></label>
-                    <button type="submit" className="form-btn">LOG IN</button>
+                    <Button type={ButtonTypes.LoginBtn}>LOG IN</Button>
                     <p className='sign-in-demo' onClick={signInDemo} >sign in demo</p>
                 </form>
                 <p>{errors.email?.message}</p>

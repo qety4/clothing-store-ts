@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { SearchContext } from '../../Contexts/Search.context'
 import ComponentReveal from '../../Components/Reveal/ComponentReveal'
+import Button, { ButtonTypes } from '../../Components/Button/Button'
+
 
 const Home = () => {
     const navigate = useNavigate()
@@ -45,9 +47,9 @@ const Home = () => {
             </ComponentReveal>
             <ComponentReveal>
                 <div className='shop-all-btn-container'>
-                    <button onClick={shopAll} className='shop-all-btn'>
+                    <Button type={ButtonTypes.RoundedBtnL} onClick={shopAll} >
                         SHOP ALL
-                    </button>
+                    </Button>
                 </div>
             </ComponentReveal>
 

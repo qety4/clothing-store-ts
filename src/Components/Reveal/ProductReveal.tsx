@@ -24,7 +24,7 @@ function ProductReveal({ children, homePage }: { children: JSX.Element, homePage
 
                 <motion.div
                     variants={{
-                        hidden: { opacity: 0.3, y: 18 },
+                        hidden: { opacity: 0.3, y: 3 },
                         visible: { opacity: 1, y: 0 }
                     }}
                     initial='hidden'

@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { products } from '../../assets/all-products/allProducts'
 import { useParams } from 'react-router-dom'
 import './shopProduct.styles.scss'
+import { CartContext } from '../../Contexts/Cart.context'
+import Button, { ButtonTypes } from '../../Components/Button/Button'
+
+
 function ShopProduct() {
   const { itemId } = useParams()
+  const { addToCart } = useContext(CartContext)
   const product: CartItem | undefined = products.find((item) => item.id === Number(itemId))
   if (!product)
     return null
 
   const { url, title, price, about } = product
+
+  const addItemToCart = () => {
+    addToCart(product)
+  }
 
   return (
     <>
@@ -19,6 +28,7 @@ function ShopProduct() {
             <div className='product-image-container'>
               <img className='product-image' src={url} alt="" />
             </div>
+            <button className='btn' onClick={addItemToCart}>Add to Cart</button>
             <div className='product-text-container'>
               <div className='title-price'>
                 <div className='product-text-title'>
