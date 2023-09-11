@@ -3,7 +3,7 @@ import './loginModal.styles.scss'
 import { ReactComponent as GoogleSvg } from './../../assets/svgs/google.svg'
 import { signInWithGooglePopup } from '../../libs/firebase/firebase'
 import LogInForm from '../LoginForm/LoginForm'
-import Register from '../Register/Register'
+import RegisterForm from '../RegisterForm/RegisterForm'
 import { useEffect } from 'react'
 import { Dialog, } from '@headlessui/react'
 import { motion } from 'framer-motion'
@@ -79,7 +79,7 @@ const LogIn = () => {
                                     </>
                                     :
                                     <>
-                                        <Register />
+                                        <RegisterForm />
 
                                     </>
                             }

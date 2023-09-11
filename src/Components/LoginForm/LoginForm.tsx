@@ -46,28 +46,31 @@ const LogInForm = () => {
         try {
             if (remember) {
                 await signIn(email, password, true)
+                // .catch((e)=>setError('email',e))
             } else {
                 await signIn(email, password, false)
+                // .catch((e)=>setError('email',e))
             }
         }
         catch (error) {
+            console.log('error', error)
             if (error instanceof FirebaseError) {
-                setError('email', { message: error.code })
+                setError('root', { message: error.message })
                 return
             }
             if (error instanceof z.ZodError) {
                 console.log(error)
-                setError('email', { message: error.message })
+                setError('root', { message: error.message })
                 return
             }
-            setError('email', { message: `${error}` })
-            console.log('error', error)
+            setError('root', { message: `${error}` })
         }
         finally {
             reset()
         }
     }
 
+    console.log('errors',errors)
 
 
     return (
@@ -78,19 +81,17 @@ const LogInForm = () => {
                     <div className="input-box">
                         <label htmlFor="log-email">Email</label>
                         <input className='input-text'
-                            name='email'
                             id='log-email'
                             type="email"
-                            required
+                            {...register('email')}
                         />
                     </div>
                     <div className="input-box">
                         <label htmlFor="log-password">Password</label>
                         <input className='input-text'
-                            name='password'
                             id='log-password'
                             type={visible ? "text" : "password"}
-                            required
+                            {...register('password')}
                         />
                         <span className='visibility' onClick={visibilityToggle} >{visible ? <Hide /> : <Show />}</span>
                     </div>
@@ -99,7 +100,7 @@ const LogInForm = () => {
                     <Button type={ButtonTypes.LoginBtn}>LOG IN</Button>
                     <p className='sign-in-demo' onClick={signInDemo} >sign in demo</p>
                 </form>
-                <p>{errors.email?.message}</p>
+                <p>{errors.password?.message || errors.email?.message}</p>
             </div>
         </div>
     )
