@@ -80,18 +80,16 @@
     }
 
     .other-looks-container {
-        width: 100%;
+        width: 98.1%;
         height: 50%;
         display: grid;
-        padding: 0 0rem 0 3rem;
+        padding: 0 0rem 0 1.9%;
         .other-looks-title {
             text-align: center;
-
+            box-sizing: content-box;
             color: rgba(32, 32, 32, 0.88);
 
             letter-spacing: 1.1rem;
-
-
 
         }
 

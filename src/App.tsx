@@ -20,7 +20,6 @@ const App = () => {
           <Nav />
         </React.Suspense>
       }>
-        {/* <Route path='/' element={<h1>Yoo</h1>}/> */}
         <Route index element={<Home />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/shop/*' element={
