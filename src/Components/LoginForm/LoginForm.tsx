@@ -46,10 +46,8 @@ const LogInForm = () => {
         try {
             if (remember) {
                 await signIn(email, password, true)
-                // .catch((e)=>setError('email',e))
             } else {
                 await signIn(email, password, false)
-                // .catch((e)=>setError('email',e))
             }
         }
         catch (error) {
@@ -69,8 +67,6 @@ const LogInForm = () => {
             reset()
         }
     }
-
-    console.log('errors',errors)
 
 
     return (

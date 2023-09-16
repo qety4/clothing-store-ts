@@ -7,9 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Profile = () => {
-  const { currentUserInfo, currentUser } = useContext(UserContext)
-  console.log(currentUserInfo)
-  console.log(currentUser)
+  const { currentUserInfo } = useContext(UserContext)
   const navigate = useNavigate()
   const signOut = () => {
     navigate('/')

@@ -63,7 +63,7 @@ export const cartReducer = (state:typeof INITIAL_STATE, action:CartAction): type
 
 
 const addCartItem = (cartItems:CartItem[], item:CartItem) => {
-    console.log(cartItems)
+
     const exists = cartItems.find(
         (cartItem) => cartItem.id === item.id
     );
@@ -103,7 +103,7 @@ export const CartProvider = ({ children }:ChildrenType) => {
     const { cartItems, cartCount, cartTotal } = state
 
     const updateCartReducer = (newCartItems:CartItem[]) => {
-        console.log(newCartItems)
+        
         const newCartCount = newCartItems.reduce((total, item) => total + item.quantity!, 0)
         const newCartTotal = newCartItems.reduce((total, item) => total + Number(item.price) * item.quantity!, 0)
         const cart = {
@@ -121,15 +121,6 @@ export const CartProvider = ({ children }:ChildrenType) => {
 
         })
     }
-
-    // const setIsCartOpen = (bool:boolean) => {
-    //     dispatch({
-    //         type: CART_ACTION_TYPES.SET_CART_OPEN,
-    //         payload: {
-    //            isCartOpen: bool
-    //         }
-    //     })
-    // }
 
     const addToCart = (cartItem:CartItem) => {
         const newCart = addCartItem(cartItems, cartItem)

@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 
 import Home from './Routes/Home/Home.component'
-// import ShopRoute from './Routes/ShopRoute/ShopRoute'
 import Checkout from './Routes/Checkout/Checkout'
 import PaymentPage from './Routes/PaymentPage/PaymentPage'
 import Profile from './Routes/Profile/Profile'

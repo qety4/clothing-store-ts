@@ -1,6 +1,4 @@
 .product-page__product {
-    display: grid;
-    grid-template-rows: 1fr 1fr ;
     width: 100%;
     height: 100%;
     margin: 3% 0 0 1rem;
@@ -15,11 +13,11 @@
             height: 100%;
         }
     }
-    .btn{
-        position: fixed;
-        bottom: 35vh;
-        width: 17rem;
-        height: 3rem;
+    .product-btn-container{
+        display: flex;
+        justify-content: center;
+        width: 15em;
+        height: 3em;
     }
     .product-text-container{
         width: 17rem;
@@ -31,9 +29,5 @@
             display: flex;
             justify-content: space-between;
         }
-    }
-    .btn-container{
-        width: 50rem;
-        height: 1rem;
     }
 }

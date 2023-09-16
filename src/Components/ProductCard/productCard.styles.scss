@@ -9,7 +9,7 @@
     position: relative;
     background: linear-gradient(180deg, rgba(241, 241, 241, 0.079) 0%, rgba(232, 232, 232, 0) 100%);
     border-radius: 3px;
-    font-size: 18px;
+    font-size: clamp(10px, 1vw, 20px);
     gap: 0.8rem;
     height: 91%;
     padding: 0.3rem 0.3rem 0.8rem 0.3rem;
@@ -48,18 +48,25 @@
     .product-text-desc {
         width: 90%;
 
-        .title-price {
+        .title-price-container {
             display: flex;
             justify-content: space-between;
             margin-bottom: 0.3rem;
         }
 
         .product-title {
+            text-transform: uppercase;
             letter-spacing: 0.3rem;
+            word-break: keep-all;
+            font-size: clamp(15px, 1vw, 1rem);
         }
 
         .product-price {
-            font-size: 21px;
+            font-size: clamp(14px, 1vw, 21px);
+        }
+
+        .product-about {
+            font-size: clamp(13px, 1vw, 20px);
         }
     }
 
@@ -83,16 +90,10 @@
         }
 
         .product-text-desc {
-            font-size: 0.9rem;
             height: 40%;
 
             .product-title {
                 letter-spacing: 0.03rem;
-                font-size: 1rem;
-            }
-
-            .product-price {
-                font-size: 1rem;
             }
         }
     }

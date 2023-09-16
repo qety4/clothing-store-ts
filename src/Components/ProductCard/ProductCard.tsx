@@ -11,14 +11,12 @@ const ProductCard = ({ item,
     item: CartItem,
     homePage: boolean
 }) => {
-    const { addToCart, cartItems } = useContext(CartContext)
+    const { addToCart } = useContext(CartContext)
     const navigate = useNavigate()
     const { url, title, about, price } = item
 
     const addItemToCart = () => {
         addToCart(item)
-        console.log(item)
-        console.log(cartItems)
     }
     const itemPage = () => {
         navigate(`/shop/${item.id}`)
@@ -30,9 +28,9 @@ const ProductCard = ({ item,
                 <div className='featured-product-container' >
                     <img className='product-image' src={url} onClick={itemPage} alt="" />
                     <div className='product-text-desc'>
-                        <div className='title-price'>
+                        <div className='title-price-container'>
                             <p className="product-title">
-                                {title.toUpperCase()}
+                                {title}
                             </p>
                             <p className="product-price">
                                 {price}€

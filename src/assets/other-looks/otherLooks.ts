@@ -21,7 +21,6 @@ export const otr = [
         title: 'Pants',
         about: 'dyed work trousers',
         url: 'https://cdn-images.farfetch-contents.com/19/81/29/26/19812926_44645128_1000.jpg',
-        // hover: '',
         price: '1'
 
     },

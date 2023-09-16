@@ -1,5 +1,38 @@
 @import '../../assets/saas-variables/media.scss';
 
+.other-looks-container {
+    width: 98.1%;
+    height: 50%;
+    display: grid;
+    padding: 0 0rem 0 1.9%;
+    .other-looks-title {
+        text-align: center;
+        box-sizing: content-box;
+        color: rgba(32, 32, 32, 0.88);
+
+        letter-spacing: 1.1rem;
+
+    }
+
+    @media (max-width:$resp-product) {
+        .product-text-desc {
+            height: 40%;
+
+            .product-title {
+                letter-spacing: 0.03rem;
+            }
+        }
+
+        .add-to-cart-btn {
+            font-size: 59%;
+            margin-bottom: 70%;
+        }
+        .other-looks-container{
+            padding: 0;
+        }
+    }
+}
+
 .otr-grid{
     display: grid;
     grid-template-columns: 60% 40%;
