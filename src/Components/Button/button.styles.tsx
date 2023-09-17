@@ -30,7 +30,7 @@ font-size: 150%;
 export const RoundedButtonM = styled(BaseButton)`
 padding: 5.8% 13% 5.8% 11%;
 font-weight: 100;
-font-size: 1.2rem;
+font-size: clamp(0.9em, 1vw, 1.2rem);
 border-radius: 1.8rem;
 font-family: 'Segoe UI', sans-serif;
 display: flex;
@@ -46,20 +46,15 @@ transition: .3s linear;
 `
 
 export const RoundedButtonL = styled(BaseButton)`
-font-size: 1.8rem;
+font-size: clamp(1.1rem,2.8vw, 1.8rem) ;
 letter-spacing: 0.2rem;
-padding: 2.3rem 4.9rem;
+padding: 1.3em 2.03em;
 border-radius: 3.8rem;
 border: 0.001rem solid rgba(0, 0, 0, 0.337);
 font-family: 'Work Sans';
 transition: .8s;
 text-shadow: 0.03rem 0.03rem 0.3rem;
 text-align: center;
-
-@media(max-width:53em) {
-    font-size: 1.3rem;
-    padding: 1.5rem 3.1rem;
-}
 
 &:hover {
     border: 0.3px solid rgba(0, 0, 0, 0);

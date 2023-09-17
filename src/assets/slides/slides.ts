@@ -2,7 +2,7 @@
 export const slides = [
     {
         title:'sneakers',
-        url:'https://cdn-images.farfetch-contents.com/14/01/50/52/14015052_18482725_1000.jpg',
+        url:'https://cdn-images.farfetch-contents.com/18/74/01/83/18740183_41184374_1000.jpg',
     },
     {
         title:'hoodies',

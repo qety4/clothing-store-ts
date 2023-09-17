@@ -6,7 +6,6 @@ import ShopAllBtn from '../../Components/ShopAllBtn/ShopAllBtn'
 
 
 const Home = () => {
-    console.log(process.env.REACT_APP_KEY)
     return (
         <main className='home'>
 

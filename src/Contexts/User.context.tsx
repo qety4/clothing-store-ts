@@ -66,8 +66,6 @@ export const UserProvider = ({ children }: ChildrenType) => {
     const [state, dispatch] = useReducer(userReducer, INITIAL_STATE)
 
     const { currentUser, currentUserInfo } = state
-    console.log(currentUser)
-    console.log(currentUserInfo)
 
 
     const setCurrentUser = (user: User | null) => {
@@ -89,7 +87,6 @@ export const UserProvider = ({ children }: ChildrenType) => {
 
     useEffect(() => {
         const stopListener = authStateChangeListener((user) => {
-            console.log('current', user)
             if (user) {
                 createUserDocumentFromAuth(user)
                     .then((user) => user && setCurrentUserInfo(user.data() as UserInfo))

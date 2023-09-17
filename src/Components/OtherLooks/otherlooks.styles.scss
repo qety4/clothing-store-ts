@@ -1,10 +1,10 @@
 @import '../../assets/saas-variables/media.scss';
 
 .other-looks-container {
-    width: 98.1%;
-    height: 50%;
+    width: 94.4%;
+    margin: 0 1.8%;
     display: grid;
-    padding: 0 0rem 0 1.9%;
+
     .other-looks-title {
         text-align: center;
         box-sizing: content-box;
@@ -13,64 +13,43 @@
         letter-spacing: 1.1rem;
 
     }
-
-    @media (max-width:$resp-product) {
-        .product-text-desc {
-            height: 40%;
-
-            .product-title {
-                letter-spacing: 0.03rem;
-            }
-        }
-
-        .add-to-cart-btn {
-            font-size: 59%;
-            margin-bottom: 70%;
-        }
-        .other-looks-container{
-            padding: 0;
-        }
-    }
 }
 
-.otr-grid{
+.otr-grid {
     display: grid;
     grid-template-columns: 60% 40%;
     width: 100%;
     height: 70%;
-    .look-items{
-        padding: 2.3% 0 0 0;
+    gap: 0 3%;
+    .look-items {
+        padding: 0 5% 0 0;
         display: grid;
-        gap: 1.3%;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50% 50%;
+        gap: 0 1.9%;
         height: 50%;
-        width: 85%;
-
-        @media (max-width:$resp-layout) {
-            .add-to-cart-btn{
-                bottom: 20%;
-            }
-            
-        }
-    }
-    .look-pic-container{
-        padding: 0 0 3% 0;
-        display: flex;
         width: 100%;
-        align-items: center;
-        .look-pic{
-        background-image: url('https://cdn-images.farfetch-contents.com/19/81/29/26/19812926_44621781_1000.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        height: 59%;
-        width: 71%;
-        margin: 0 0 27% 2.3%;
-        z-index: 1;
-        transition: .3s linear ;
-        &:hover{
-            background-image: url('https://cdn-images.farfetch-contents.com/19/81/35/86/19813586_44624307_1000.jpg');
-        }
     }
+
+    .look-pic-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .look-pic {
+            background-image: url('https://cdn-images.farfetch-contents.com/19/81/29/26/19812926_44621781_1000.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 55%;
+            width: 71%;
+            margin-bottom: 10vh ;
+            z-index: 1;
+            transition: .3s linear;
+
+            &:hover {
+                background-image: url('https://cdn-images.farfetch-contents.com/19/81/35/86/19813586_44624307_1000.jpg');
+            }
+        }
     }
 }

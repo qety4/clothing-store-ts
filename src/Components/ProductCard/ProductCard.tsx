@@ -25,7 +25,7 @@ const ProductCard = ({ item,
     return (
         <>
             <ProductReveal homePage={homePage}>
-                <div className='featured-product-container' >
+                <div className='product-container' >
                     <img className='product-image' src={url} onClick={itemPage} alt="" />
                     <div className='product-text-desc'>
                         <div className='title-price-container'>
@@ -40,7 +40,10 @@ const ProductCard = ({ item,
                             {about}
                         </p>
                     </div>
-                    <button className='add-to-cart-btn' onClick={() => addItemToCart()}>ADD TO CART</button>
+                    <button className='add-to-cart-btn' onClick={() => addItemToCart()}>
+                        <p>ADD TO CART
+                        </p>
+                    </button>
                 </div>
             </ProductReveal>
 

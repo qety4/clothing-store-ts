@@ -1,5 +1,5 @@
 
-export const products = [
+export const shopProducts = [
 {
     id: 1,
     title: 't-shirt',

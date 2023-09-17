@@ -51,17 +51,15 @@ const LogInForm = () => {
             }
         }
         catch (error) {
-            console.log('error', error)
             if (error instanceof FirebaseError) {
-                setError('root', { message: error.message })
+                setError('email', { message: error.message })
                 return
             }
             if (error instanceof z.ZodError) {
-                console.log(error)
-                setError('root', { message: error.message })
+                setError('password', { message: error.message })
                 return
             }
-            setError('root', { message: `${error}` })
+            setError('email', { message: `${error}` })
         }
         finally {
             reset()

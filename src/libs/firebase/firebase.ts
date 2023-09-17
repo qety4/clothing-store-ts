@@ -24,7 +24,6 @@ import {
     QueryDocumentSnapshot
 } from 'firebase/firestore'
 
-console.log('env',process.env.REACT_APP_KEY)
 
 const app = initializeApp({
     apiKey:'AIzaSyCZeMliLAFzhsUf4lbLh37__YlJKbemxfY',
@@ -99,10 +98,9 @@ export const createUserDocumentFromAuth = async (userAuth:User, additionalinform
                 ...additionalinformation
             })
         } catch (e) {
-            console.log('error creating project', e)
+            throw new Error(`${e}`)
         }
     }
-    console.log(userSnapshot)
     return userSnapshot as QueryDocumentSnapshot<UserInfo>
 };
 

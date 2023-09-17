@@ -21,7 +21,6 @@ const Slider = () => {
     }, [currentIndex, setIndex])
 
     const gotToSlide = (index: number) => {
-        console.log('onclick', index)
         setIndex(index)
     }
 
@@ -42,9 +41,11 @@ const Slider = () => {
     return (
         <ComponentReveal>
             <section className='slider-home'>
-                <p className='variety-title'>
-                    VARIETY
-                </p>
+                <div className='variety-title'>
+                    <p >
+                        styles
+                    </p>
+                </div>
                 <div className='varietySlider'>
 
                     <div className="slider">

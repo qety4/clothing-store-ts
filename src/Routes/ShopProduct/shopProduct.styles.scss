@@ -1,12 +1,20 @@
-.product-page__product {
+.product-page{
     width: 100%;
     height: 100%;
-    margin: 3% 0 0 1rem;
+}
+
+.product-page__product {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5vh 0 0 5vw;
     row-gap: 0rem;
     .product-image-container {
-        width: 17rem;
-        height: 20rem;
-
+        width: 80%;
+        height: 100%;
         box-sizing: content-box;
         .product-image {
             width: 100%;
@@ -16,16 +24,13 @@
     .product-btn-container{
         display: flex;
         justify-content: center;
-        width: 15em;
-        height: 3em;
+        width: 100%;
+        height: 1.8em;
     }
     .product-text-container{
-        width: 17rem;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        height: 20%;
+        width: 80%;
         .title-price{
-            margin: 0 0.8rem;
+            white-space: nowrap;
             display: flex;
             justify-content: space-between;
         }

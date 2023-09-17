@@ -20,30 +20,36 @@ a {
 }
 
 .nav {
-  padding: 0.8rem 3% 0.8rem 3%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 101;
   position: sticky;
   top: 0;
   height: 100%;
-  text-align: center;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.413));
-
-  .nav__logo {
+  text-align: center;
+  padding-top: 0.7vh;
+  .nav__logo-container{
     height: 100%;
-    font-size: 28px;
-    font-weight: 100;
+    width: 30%;
+    .nav__logo {
+      font-size: 1.1em;
+      font-weight: 100;
+      letter-spacing: 0.08em;
+    }
   }
 
   .nav__left {
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
+    text-align: center;
     .nav__left__shop {
-      font-size: 1.48rem;
-      letter-spacing: 0.19rem;
+      font-size: clamp(1.13rem, 2.8vw, 1.48rem);
+      letter-spacing: 0.09em;
       font-family: 'Work Sans';
       font-weight: 300;
     }
@@ -53,18 +59,18 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
+    width: 30%;
+    text-align: center;
     .login-btn {
       border: none;
       background: none;
-      font-size: 1.48rem;
+      font-size: clamp(1.13rem, 2.8vw, 1.48rem);
       font-weight: normal;
       font-family: 'work sans', Times, serif;
-      letter-spacing: 0.19rem;
+      letter-spacing: 0.08em;
       text-shadow: 0 0 0.08rem;
       font-weight: 300;
       cursor: pointer;
-
       transition: .2s linear;
 
       &:hover {
@@ -74,34 +80,5 @@ a {
     }
 
 
-  }
-
-  @media (max-width: $resp-layout) {
-    .nav-left {
-
-      .nav-shop {
-        margin: 0;
-      }
-    }
-
-    .nav-right {
-      .login-btn {
-        margin: 0;
-      }
-
-      .nav-cart-container {
-        margin: 0;
-
-        .cart-container {
-          .cart {
-            margin: 0;
-          }
-        }
-
-        .cartdropdown-container {
-          transform: translate(-61%, -2%);
-        }
-      }
-    }
   }
 }

@@ -4,16 +4,16 @@
 .shop-filter {
     position: absolute;
     height: 20vh;
-    left: 2rem;
-    top: 13%;
+    left: 8%;
+    top: 8vh;
     z-index: 10;
     .select-btn {
         width: 7.5em;
         height: 1.8em;
         background: rgba(255, 255, 255, 0.508);
-        border: solid black 2px;
+        border: solid rgba(0, 0, 0, 0.694) 1px;
         border-radius: 2.8px;
-        box-shadow: 0 0.3px 0.8px;
+        box-shadow: 0 0.3px 0.8px rgba(0, 0, 0, 0.284);
         letter-spacing: 0.1rem
     }
 
@@ -39,10 +39,10 @@
             }
         }
     }
-    @media (max-width:$resp-layout) {
-        .select-btn{
-            width: 5.3rem;
-            font-size: 0.78rem;
-        }
-    }
+    // @media (max-width:$resp-layout) {
+    //     .select-btn{
+    //         width: 5.3rem;
+    //         font-size: 0.78rem;
+    //     }
+    // }
 }

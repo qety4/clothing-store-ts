@@ -1,6 +1,6 @@
 @import '../../assets/saas-variables/media.scss';
 
-.featured-product-container {
+.product-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,6 @@
     gap: 0.8rem;
     height: 91%;
     padding: 0.3rem 0.3rem 0.8rem 0.3rem;
-
     &:hover {
         .add-to-cart-btn {
             opacity: 0.9;
@@ -21,6 +20,13 @@
     }
 
     .add-to-cart-btn {
+        position: absolute;
+        height: 11%;
+        width: 73%;
+        max-width: 12em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         transition: .28s linear;
         opacity: 0;
         background: rgba(0, 0, 0, 0.667);
@@ -29,14 +35,14 @@
         box-shadow: 0 1.8px 3px rgba(0, 0, 0, 0.33);
         color: white;
         text-shadow: 0.3px 0.8px 3px black;
-        transform: translate(0, 10%);
-        position: absolute;
         z-index: 3;
-        font-size: 110%;
-        padding: 3.8% 7%;
+        font-size: 113%;
+        padding: 1.1em 3em;
         cursor: pointer;
-        margin-bottom: 8%;
 
+        p{
+            white-space: nowrap ;
+        }
         &:hover {
             background: rgba(255, 255, 255, 0.78);
             color: black;
@@ -47,26 +53,29 @@
 
     .product-text-desc {
         width: 90%;
-
         .title-price-container {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.3em;
+            align-items: center;
         }
 
         .product-title {
             text-transform: uppercase;
-            letter-spacing: 0.3rem;
+            letter-spacing: 0.23em;
             word-break: keep-all;
-            font-size: clamp(15px, 1vw, 1rem);
+            font-size: clamp(1.1em, 1.1vw, 1rem);
+            white-space: nowrap;
         }
 
         .product-price {
-            font-size: clamp(14px, 1vw, 21px);
+            font-size: clamp(1.1em, 1.1vw, 1.3rem);
         }
 
         .product-about {
             font-size: clamp(13px, 1vw, 20px);
+            width: 100%;
+            height: fit-content;
         }
     }
 
@@ -80,21 +89,5 @@
         box-shadow: 0 1.3px 3px rgba(0, 0, 0, 0.052);
         border-radius: 0.3rem;
 
-    }
-
-    @media(max-width:$resp-product) {
-        .add-to-cart-btn {
-            bottom: 50%;
-            font-size: 90%;
-            padding: 5% 5%;
-        }
-
-        .product-text-desc {
-            height: 40%;
-
-            .product-title {
-                letter-spacing: 0.03rem;
-            }
-        }
     }
 }
