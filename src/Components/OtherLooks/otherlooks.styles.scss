@@ -3,15 +3,15 @@
 .other-looks-container {
     width: 94.4%;
     margin: 0 1.8%;
+    margin-bottom: 5vh;
     display: grid;
 
     .other-looks-title {
         text-align: center;
         box-sizing: content-box;
         color: rgba(32, 32, 32, 0.88);
-
-        letter-spacing: 1.1rem;
-
+        font-size: clamp(0.5rem, 2.7vw , 100%);
+        letter-spacing: 0.48em;
     }
 }
 
@@ -25,7 +25,7 @@
         padding: 0 5% 0 0;
         display: grid;
         grid-template-columns: 50% 50%;
-        gap: 0 1.9%;
+        gap: 0.3em 0.8em;
         height: 50%;
         width: 100%;
     }

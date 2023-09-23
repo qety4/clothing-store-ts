@@ -1,0 +1,19 @@
+.button {
+
+    padding: 5.8em 13em 5.8em 11em;
+    font-weight: 100;
+    font-size: clamp(0.9em, 1vw, 1.2rem);
+    border-radius: 1.8rem;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
+
+    &:hover {
+        background: rgba(227, 227, 227, 0.046);
+        color: rgba(0, 0, 0, 0.808);
+        box-shadow: 0 0.5px 1.8px rgba(0, 0, 0, 0.347);
+        text-shadow: 0.1px 0.1px 1.3px rgba(0, 0, 0, 0.786);
+
+    }
+}

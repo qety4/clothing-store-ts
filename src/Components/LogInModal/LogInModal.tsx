@@ -22,16 +22,17 @@ const LogIn = () => {
             setModal(false)
         }
     }, [])
-
-    const toggleLogin = (a: number) => {
-        setLog(a)
-    }
-
+    
     if (modal) {
         body.classList.add('stop-scroll')
     } else {
         body.classList.remove('stop-scroll')
     }
+
+    const toggleLogin = (a: number) => {
+        setLog(a)
+    }
+
 
 
 
@@ -52,12 +53,12 @@ const LogIn = () => {
                 <div className='login-modal'>
                     <Dialog.Panel className='login-modal-content' as={motion.div}
                         variants={{
-                            hidden: { opacity: 0.8, y: 4.8 },
+                            hidden: { opacity: 0.8, y: 3 },
                             visible: { opacity: 1, y: 0 }
                         }}
                         initial='hidden'
                         animate='visible'
-                        transition={{ duration: 0.48, delay: 0 }}
+                        transition={{ duration: 0.3, delay: 0 }}
                     >
 
                         <p className='modal-title'>welcome</p>

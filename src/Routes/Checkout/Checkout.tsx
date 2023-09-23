@@ -15,37 +15,19 @@ const Checkout = () => {
         <div className='checkout-page'>
 
             <p className='checkout-title'>CHECK OUT</p>
-            <div className='checkout-area'>
-                <div className='items-desc'>
-                    <p className='items-desc-product'>
-                        Product
-                    </p>
-                    <span>
-                        <p>
-                            Price
-                        </p>
-                        <p>
-                            Quantity
-                        </p>
-                        <p>
-                            Total
-                        </p>
-                    </span>
-                </div>
-                <div className='checkout-items'>
-                    {
-                        cartItems.map((item, index) =>
-                            <div key={index} className='checkout-item'>
-                                <CheckoutItem item={item} />
-                            </div>
-                        )
-                    }
-                </div>
+            <div className='checkout-items'>
+                {
+                    cartItems.map((item, index) =>
+                        <CheckoutItem key={`${item.title}-${item.id}`} item={item} />
+                    )
+                }
             </div>
             {cartItems.at(0) &&
                 <>
                     <p className='checkout-total'>{cartTotal}€ Total</p>
-                    <button onClick={goToPay} className='pay-page-button'>PAY</button>
+                    <div className='pay-btn-container'>
+                        <button onClick={goToPay} className='pay-btn'>PAY</button>
+                    </div>
                 </>
             }
         </div>

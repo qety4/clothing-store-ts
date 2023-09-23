@@ -2,7 +2,7 @@
 export const slides = [
     {
         title:'sneakers',
-        url:'https://cdn-images.farfetch-contents.com/18/74/01/83/18740183_41184374_1000.jpg',
+        url:'https://cdn-static.farfetch-contents.com/cms-ccloud/caas/v1/media/315798/data/f250f16ff9a210ceda2054c4708c8c6d/3x4_messaging-side/936/2023-09-20-ww-web-reebok-page-ds-reebok-special-items-multicategory-hero-extra.jpeg',
     },
     {
         title:'hoodies',

@@ -3,7 +3,7 @@ import Slider from '../../Components/VarietySlider/VarietySlider'
 import FeaturedProducts from '../../Components/FeaturedProducts/FeaturedProducts'
 import OtherLooks from '../../Components/OtherLooks/OtherLooks'
 import ShopAllBtn from '../../Components/ShopAllBtn/ShopAllBtn'
-
+import './home.styles.scss'
 
 const Home = () => {
     return (

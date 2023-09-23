@@ -26,24 +26,32 @@ const ProductCard = ({ item,
         <>
             <ProductReveal homePage={homePage}>
                 <div className='product-container' >
+
                     <img className='product-image' src={url} onClick={itemPage} alt="" />
+
                     <div className='product-text-desc'>
                         <div className='title-price-container'>
-                            <p className="product-title">
-                                {title}
-                            </p>
-                            <p className="product-price">
-                                {price}€
-                            </p>
+                            <div>
+                                <p className="product-title">
+                                    {title}
+                                </p>
+                            </div>
+                            <div>
+                                <p className="product-price">
+                                    {price}€
+                                </p>
+                            </div>
                         </div>
                         <p className="product-about">
                             {about}
                         </p>
                     </div>
+
                     <button className='add-to-cart-btn' onClick={() => addItemToCart()}>
                         <p>ADD TO CART
                         </p>
                     </button>
+
                 </div>
             </ProductReveal>
 

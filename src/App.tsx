@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Home from './Routes/Home/Home.component'
+import Home from './Routes/Home/Hom'
 import Checkout from './Routes/Checkout/Checkout'
 import PaymentPage from './Routes/PaymentPage/PaymentPage'
 import Profile from './Routes/Profile/Profile'
 import React from 'react'
 import Loader from './Components/Loader/Loader'
 
-const Nav = React.lazy(() => import('./Routes/Nav/Nav.component'))
+const Nav = React.lazy(() => import('./Routes/Nav/Nav'))
 const ShopRoute = React.lazy(() => import('./Routes/ShopRoute/ShopRoute'))
 
 const App = () => {

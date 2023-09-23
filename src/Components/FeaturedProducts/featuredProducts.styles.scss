@@ -3,36 +3,34 @@
 .featured-products-home-container {
     margin-top: 5.3rem;
     margin-bottom: 9.3rem;
-
-    .featured-products-title {
-        width: 100%;
-
-        text-align: center;
-
-        letter-spacing: 1.1rem;
-        position: absolute;
-        color: rgba(32, 32, 32, 0.88);
-        top: 2.8%;
-
-    }
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 2.8rem 0;
-    display: flex;
-    align-items: center;
-
+    padding: 1.3vh 0 3vh 0 ;
+    box-shadow: inset 0 3px 5.8px rgba(0, 0, 0, 0.052),
+    inset 0 -3px 5.8px rgba(0, 0, 0, 0.053);
     &:hover {
         transition: opacity linear 1.8s;
-
+        
         .scroll-btn {
             opacity: 1;
         }
     }
 
-    box-shadow: inset 0 3px 5.8px rgba(0, 0, 0, 0.052),
-    inset 0 -3px 5.8px rgba(0, 0, 0, 0.053);
+    .featured-products-title {
+        width: 100%;
+        white-space: nowrap;
+        text-align: center;
+        font-size: clamp(0.5rem, 2.8vw , 100%);
+        letter-spacing: 0.43em;
+        color: rgba(32, 32, 32, 0.88);
+        margin-bottom: 2.3%;
+    }
+
 }
 
 
@@ -88,32 +86,16 @@
     grid-auto-flow: column;
     grid-auto-columns: 25%;
     padding-left: 4.8%;
-
+    padding-right: 4.8%;
+    gap: 1em;
     overflow-x: scroll;
+    overflow-y: hidden;
     overscroll-behavior-inline: contain;
-    width: 100%;
+    width: 90%;
 
-
-    .featured-product-container {
-
-        width: 80%;
-        height: 90%;
-
-        padding: 0.3rem 0.3rem 0.8rem 0.3rem;
-
+    .product-text-desc {
         .product-about {
             display: none;
-        }
-
-        .product-text-desc {
-
-            width: 80%;
-        }
-
-        .product-image {
-            padding: 1rem 1rem 0rem 1rem;
-            height: 85%;
-            width: 79%;
         }
     }
 
@@ -124,7 +106,9 @@
 
 .snaps-inline {
     scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 4.8%;
+    scroll-padding-inline-start: 4.8% ;
+    scroll-padding-inline-end: 4.8% ;
+
 
     * {
         scroll-snap-align: start;

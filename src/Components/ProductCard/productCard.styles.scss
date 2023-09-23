@@ -13,6 +13,7 @@
     gap: 0.8rem;
     height: 91%;
     padding: 0.3rem 0.3rem 0.8rem 0.3rem;
+
     &:hover {
         .add-to-cart-btn {
             opacity: 0.9;
@@ -22,7 +23,7 @@
     .add-to-cart-btn {
         position: absolute;
         height: 11%;
-        width: 73%;
+        width: 70%;
         max-width: 12em;
         display: flex;
         align-items: center;
@@ -32,17 +33,18 @@
         background: rgba(0, 0, 0, 0.667);
         border-radius: 1.8px;
         border: none;
-        box-shadow: 0 1.8px 3px rgba(0, 0, 0, 0.33);
+        box-shadow: 0 1.8px 2.8px rgba(0, 0, 0, 0.128);
         color: white;
         text-shadow: 0.3px 0.8px 3px black;
         z-index: 3;
-        font-size: 1.8vw;
-        padding: 1.1em 3em;
+        font-size: clamp(0.8rem, 1.8vw, 1.3rem);
+        padding: 1.08em 3em;
         cursor: pointer;
 
-        p{
-            white-space: nowrap ;
+        p {
+            white-space: nowrap;
         }
+
         &:hover {
             background: rgba(255, 255, 255, 0.78);
             color: black;
@@ -53,29 +55,44 @@
 
     .product-text-desc {
         width: 90%;
+        height: 22%;
+        min-height: 22%;
+        max-height: 22%;
+        display: flex;
+        gap: 0.3em;
+        align-items: center;
+        flex-direction: column;
         .title-price-container {
             display: flex;
-            justify-content: space-between;
             margin-bottom: 0.3em;
-            align-items: center;
-        }
+            width: 100%;
+            gap: 10%;
+            justify-content: center;
+            .product-title {
+                width: 80%;
+                text-transform: uppercase;
+                letter-spacing: 0.23em;
+                word-break: keep-all;
+                font-size: clamp(100%, 1.1vw, 1rem);
+                white-space: nowrap;
+            }
 
-        .product-title {
-            text-transform: uppercase;
-            letter-spacing: 0.23em;
-            word-break: keep-all;
-            font-size: clamp(1.1em, 1.1vw, 1rem);
-            white-space: nowrap;
-        }
+            .product-price {
+                font-size: clamp(100%, 1.1vw, 1.3rem);
+                width: 20%;
+            }
 
-        .product-price {
-            font-size: clamp(1.1em, 1.1vw, 1.3rem);
+            div {
+                box-sizing: content-box;
+            }
         }
 
         .product-about {
             font-size: clamp(13px, 1vw, 20px);
             width: 100%;
             height: fit-content;
+            text-align: center;
+
         }
     }
 

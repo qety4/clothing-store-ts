@@ -1,78 +1,41 @@
 @import '../../assets/saas-variables/media.scss';
 
 .checkout-page{
-    overflow: hidden;
+    width: 100%;
+    margin: 8% 0 3% 0;
+
+}
+.checkout-title {
     text-align: center;
-    .checkout-title{
-        padding: 0.9% 0 2.9% 0 ;
-        text-align: center;
-        font-size: 200%;
-        text-shadow: 0.1rem 0.1rem 0.1rem rgb(223, 223, 223);
-        letter-spacing: 0.6rem;
-    }
-    .checkout-area{
-        .items-desc{
-            position: relative;
-            display: flex;
-            .items-desc-product{
-                padding-left: 10%;
-            }
-            span{
-                position: absolute;
-                right: 0;
-                transform: translate(-24.3%,0);
-                display: flex;
-                justify-content: space-around;
-                width: 48%;
-            }
-            @media(max-width:$resp-layout){
-                .items-desc-product{
-                    padding-left: 7.5%;
-                }
-                span{
-                    transform: translate(-15%,0);
-                }
-            }
-        }
-    }
-    .checkout-items{
-        height: 100%;
-        width: 100%;
-        .checkout-item{
-            width: 100%;
-            height: 100%;
-            .cart-item-img{
-                width: 18%;
-            }
-            .item-details{
-                margin-left: 20%;
-                .name{
-                    font-size: 170%;
-                }
-                .price{
-                    font-size: 150%;
-                }
-            }
-        }
-    }
-    .checkout-total{
-        display: flex;
-        justify-content: flex-end;
-        margin: 2% 10% 0 10%;
-        font-size: 180%;
-    }
-    .pay-page-button{
-        background: none;
-        width: 8rem;
-        border-radius: 0.5rem;
-        font-size: 1rem;
-        padding: 1rem 0.3rem;
-        border: black solid 0.01rem;
-        transition: .8s ;
-        cursor: pointer;
-        &:hover{
-            color: rgba(13, 13, 13, 0.602);
-            background: rgba(243, 243, 243, 0.04);
-        }
+    font-size: 130%;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgb(223, 223, 223);
+    letter-spacing: 0.53em;
+}
+
+.checkout-total {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2% 10% 0 10%;
+    font-size: 180%;
+}
+
+.pay-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.pay-btn {
+    background: none;
+    width: 8rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 1rem 0.3rem;
+    border: black solid 0.01rem;
+    transition: .8s;
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(13, 13, 13, 0.602);
+        background: rgba(243, 243, 243, 0.04);
     }
 }

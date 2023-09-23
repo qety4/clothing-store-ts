@@ -8,7 +8,7 @@ function ComponentReveal({ children }: { children: JSX.Element }) {
         <div ref={ref} style={{ position: 'relative' }}>
             <motion.div
                 variants={{
-                    hidden: { opacity: 0.3, y: 13 },
+                    hidden: { opacity: 0.3, y: 8 },
                     visible: { opacity: 1, y: 0 }
                 }}
                 initial='hidden'

@@ -23,25 +23,32 @@ function ShopProduct() {
     <div className='product-page'>
 
       <div className='product-page__product'>
-        <div className='product-image-container'>
-          <img className='product-image' src={url} alt="" />
+
+        <div className='product__image-container'>
+          <img className='product__image' src={url} alt="" />
         </div>
-        <div className='product-text-container'>
-          <div className='title-price'>
-            <div className='product-text-title'>
+
+        <div className='product__info-container'>
+
+          <div className='product__title-price'>
+            <div className='product__title'>
               <p>{title}</p>
             </div>
-            <div className='product-text-price'>
+            <div className='product__price'>
               <p>{price}€</p>
             </div>
           </div>
-          <div className='product-text-about'>
+
+          <div className='product__btn-container'>
+            <Button type={ButtonTypes.RoundedBtnM} onClick={addItemToCart}>Add to Cart</Button>
+          </div>
+
+          <div className='product__text-about'>
             <p>{about}</p>
           </div>
+
         </div>
-        <div className='product-btn-container'>
-          <Button type={ButtonTypes.RoundedBtnM} onClick={addItemToCart}>Add to Cart</Button>
-        </div>
+
       </div>
 
     </div >

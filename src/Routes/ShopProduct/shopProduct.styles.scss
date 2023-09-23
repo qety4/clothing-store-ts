@@ -1,38 +1,77 @@
-.product-page{
+@import '../../assets/saas-variables/media.scss';
+
+.product-page {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .product-page__product {
-    width: 30%;
+    width: 90%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin: 5vh 0 0 5vw;
-    row-gap: 0rem;
-    .product-image-container {
-        width: 80%;
-        height: 100%;
+    margin: 10vh 0 0 0;
+
+    .product__image-container {
+        width: 100%;
         box-sizing: content-box;
-        .product-image {
-            width: 100%;
-            height: 100%;
-        }
-    }
-    .product-btn-container{
         display: flex;
         justify-content: center;
-        width: 100%;
-        height: 1.8em;
-    }
-    .product-text-container{
-        width: 80%;
-        .title-price{
-            white-space: nowrap;
-            display: flex;
-            justify-content: space-between;
+        .product__image {
+            aspect-ratio: 1/1.3;
+            width: 70%;
         }
     }
+    
+    .product__info-container {
+        margin-top: 10%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1vh;
+        
+        .product__btn-container {
+            margin: 1vh 0;
+            font-size: 80%;
+            width: 100%;
+        }
+        
+        .product__title-price {
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.1vh;
+            .product__title {
+                font-size: 1.3em;
+            }
+            
+            .product__price {
+                font-size: 1.13em;
+            }
+        }
+    }
+
+    @media (max-width: $resp-layout) {
+        flex-direction: column;
+        .product__info-container{
+            align-items: center;
+            .product__btn-container{
+                display: flex;
+                justify-content: center;
+            }
+
+            .product__title-price{
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 90%;
+            }
+        }
+    }
+    
 }

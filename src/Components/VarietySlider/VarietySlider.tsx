@@ -1,7 +1,8 @@
 import { slides } from '../../assets/slides/slides'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import './varietySlider.styles.scss'
-import ComponentReveal from '../../Components/Reveal/ComponentReveal'
+import { motion } from 'framer-motion'
+
 
 type TimerRef = ReturnType<typeof setTimeout> | null
 
@@ -39,8 +40,16 @@ const Slider = () => {
     }, [nextSlide])
 
     return (
-        <ComponentReveal>
-            <section className='slider-home'>
+            <motion.section className='slider-home'
+            variants={{
+                hidden: { opacity: 0, y:1 },
+                visible: { opacity: 1, y:0 }
+            }}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true }}
+            transition={{ duration: 1.8, delay: 0.3 }}
+            >
                 <div className='variety-title'>
                     <p >
                         styles
@@ -85,8 +94,7 @@ const Slider = () => {
 
                     </div>
                 </div>
-            </section>
-        </ComponentReveal>
+            </motion.section>
     )
 }
 export default Slider

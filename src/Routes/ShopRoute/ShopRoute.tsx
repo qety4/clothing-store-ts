@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Shop from '../ShopPage/Shop.component'
+import Shop from '../ShopPage/Shop'
 import ShopProduct from '../ShopProduct/ShopProduct'
 
 

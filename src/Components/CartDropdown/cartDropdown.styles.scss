@@ -13,7 +13,7 @@
     position: absolute;
     transform: translate(-70%,.008rem);
     border: 0.1rem solid rgba(0, 0, 0, 0.199);
-    box-shadow: 0 0.8px 3px rgba(0, 0, 0, 0.188);
+    box-shadow: 0 0.3px 3px rgba(0, 0, 0, 0.048);
     min-width: 9rem;
     max-width: 11rem;
     min-height: 17rem;
@@ -42,6 +42,7 @@
         width: 100%;
         padding: 5% 0;
         transition: .2s linear;
+        border-radius: 0px 0px 0.3rem 0.3rem;
         &:hover{
             background-color: rgba(0, 0, 0, 0.788);
             color: gray;

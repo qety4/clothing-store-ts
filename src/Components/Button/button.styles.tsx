@@ -28,10 +28,10 @@ font-size: 150%;
 `
 
 export const RoundedButtonM = styled(BaseButton)`
-padding: 5.8% 13% 5.8% 11%;
+padding: 1.7em 3.2em;
 font-weight: 100;
-font-size: clamp(0.9em, 1vw, 1.2rem);
-border-radius: 1.8rem;
+font-size: clamp(0.8rem, 1.3vw, 1.2rem);
+border-radius: 6.9em;
 font-family: 'Segoe UI', sans-serif;
 display: flex;
 align-items: center;
